@@ -132,6 +132,7 @@ class DeepQNetwork:
 
         if np.random.uniform() < self.epsilon:
             # forward feed the observation and get q value for every actions
+            print(self.s.shape)
             actions_value = self.sess.run(self.q_eval, feed_dict={self.s: observation})
             action = np.argmax(actions_value)
         else:
