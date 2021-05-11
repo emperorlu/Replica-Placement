@@ -24,7 +24,7 @@ class ReplicaplacementEnv(object):
         # for server in self.servers:
         #     obs_arr.append(server)
         # obs_arr = np.array(obs_arr)
-        self.observation_space.contains(self.servers)
+        self.observation_space = self.servers
         return self.servers
 
     def reset(self):
@@ -48,7 +48,7 @@ class ReplicaplacementEnv(object):
     def step(self, action):
 
         # 0 <= action < num_servers
-        assert self.action_space.contains(action)
+        # assert self.action_space.contains(action)
         self.servers[action] = self.servers[action] + 1
         reward = 0
         reward -= np.std(self.servers)
