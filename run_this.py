@@ -1,4 +1,5 @@
-from env import ReplicaplacementEnv
+# from env import ReplicaplacementEnv
+from maze_env import Maze
 from RL_brain import DeepQNetwork
 
 

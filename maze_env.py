@@ -89,6 +89,7 @@ class Maze(tk.Tk, object):
             origin[0] + 15, origin[1] + 15,
             fill='red')
         # return observation
+        print("observation: ",(np.array(self.canvas.coords(self.rect)[:2]) - np.array(self.canvas.coords(self.oval)[:2]))/(MAZE_H*UNIT))
         return (np.array(self.canvas.coords(self.rect)[:2]) - np.array(self.canvas.coords(self.oval)[:2]))/(MAZE_H*UNIT)
 
     def step(self, action):
