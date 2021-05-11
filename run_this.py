@@ -1,5 +1,4 @@
-# from env import ReplicaplacementEnv
-from maze_env import Maze
+from env import ReplicaplacementEnv
 from RL_brain import DeepQNetwork
 
 
@@ -39,8 +38,7 @@ def run_maze():
 
 if __name__ == "__main__":
     # maze game
-    # env = ReplicaplacementEnv()
-    env = Maze()
+    env = ReplicaplacementEnv()
     RL = DeepQNetwork(env.n_actions, env.n_features,
                       learning_rate=0.01,
                       reward_decay=0.9,
