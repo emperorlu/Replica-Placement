@@ -52,11 +52,11 @@ class DeepQNetwork:
 
         # consist of [target_net, evaluate_net]
         self._build_net()
-        t_params = tf.get_collection('target_net_params')
-        e_params = tf.get_collection('eval_net_params')
-        self.replace_target_op = [tf.assign(t, e) for t, e in zip(t_params, e_params)]
+        t_params = tf.compat.v1.get_collection('target_net_params')
+        e_params = tf.compat.v1.get_collection('eval_net_params')
+        self.replace_target_op = [tf.compat.v1.assign(t, e) for t, e in zip(t_params, e_params)]
 
-        self.sess = tf.Session()
+        self.sess = tf.compat.v1.Session()
 
         if output_graph:
             # $ tensorboard --logdir=logs
@@ -97,7 +97,7 @@ class DeepQNetwork:
         self.s_ = tf.compat.v1.placeholder(tf.float32, [None, self.n_features], name='s_')    # input
         with tf.compat.v1.variable_scope('target_net'):
             # c_names(collections_names) are the collections to store variables
-            c_names = ['target_net_params', tf.GraphKeys.GLOBAL_VARIABLES]
+            c_names = ['target_net_params', tf.compat.v1.GraphKeys.GLOBAL_VARIABLES]
 
             # first layer. collections is used later when assign to target net
             with tf.compat.v1.variable_scope('l1'):
