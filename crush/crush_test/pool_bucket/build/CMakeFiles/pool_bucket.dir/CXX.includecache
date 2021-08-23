@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fch/code/crush_test/pool_bucket/main.cc
+pool_bucket.h
+/home/fch/code/crush_test/pool_bucket/pool_bucket.h
+string
+-
+
+/home/fch/code/crush_test/pool_bucket/pool_bucket.h
+algorithm
+-
+iostream
+-
+vector
+-
+map
+-
+set
+-
+cmath
+-
+queue
+-
+assert.h
+-
+unordered_set
+-
+

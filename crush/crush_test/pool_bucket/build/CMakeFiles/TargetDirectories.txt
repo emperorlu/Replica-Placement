@@ -1,0 +1,3 @@
+/home/fch/code/crush_test/pool_bucket/build/CMakeFiles/rebuild_cache.dir
+/home/fch/code/crush_test/pool_bucket/build/CMakeFiles/edit_cache.dir
+/home/fch/code/crush_test/pool_bucket/build/CMakeFiles/pool_bucket.dir
