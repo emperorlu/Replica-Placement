@@ -9,8 +9,8 @@ using namespace std;
 
 int main()
 {
-    int pg_num = 100;
-    int node_num = 3;
+    int pg_num = 10000;
+    int node_num = 100;
     int vnode_num = 5000;
     vector<int> result(node_num, 0);   // 节点存放数据数目统计
     vector<int> weight;

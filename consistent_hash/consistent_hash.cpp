@@ -13,9 +13,9 @@ ConsistentHash::ConsistentHash(int node_num, int vnode_num, const vector<int> &w
             //size_t partition = crush_hash32_rjenkins1_2(i, j); 
             size_t partition = crush_hash32_rjenkins1_2(i, j) & 0xFFFFFFFF;
             server_nodes_.insert(pair<size_t, size_t>(partition, i));
-            if(!(t.insert(partition).second)) {
-                cout << "vnode :" << partition  << " " << i << " " << j << endl; 
-            }
+            //if(!(t.insert(partition).second)) {
+            //    cout << "vnode :" << partition  << " " << i << " " << j << endl; 
+            //}
         }
     }
     t.clear();
