@@ -15,4 +15,4 @@
 
 3. 测试平台
 
-- [Dadisi](http://dadisi.sourceforge.net/)
+- [Data-Distribution-Simulator](https://github.com/emperorlu/Data-Distribution-Simulator)
