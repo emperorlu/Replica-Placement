@@ -12,3 +12,7 @@
 2. RL based 
 
 - 在park中加入[RLRP](https://github.com/emperorlu/RL-based-Placement)
+
+3. 测试平台
+
+- [Dadisi](http://dadisi.sourceforge.net/)
